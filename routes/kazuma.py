@@ -1,7 +1,7 @@
 import json
 import logging
 
-from flask import request
+from flask import request, jsonify
 
 from routes import app
 
@@ -21,7 +21,7 @@ def evaluate():
         }
         result.append(output)
     logging.info("My result :{}".format(result))
-    return result
+    return jsonify(result)
 
 def solution(monsters) -> list:
     n = len(monsters)
