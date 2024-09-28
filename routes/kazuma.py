@@ -21,7 +21,7 @@ def evaluate():
         }
         result.append(output)
     logging.info("My result :{}".format(result))
-    return json.dumps(result)
+    return result
 
 def solution(monsters) -> list:
     n = len(monsters)
